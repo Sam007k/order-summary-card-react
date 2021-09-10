@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Paleblue: hsl(225, 100%, 94%);
+  --Brightblue: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --Verypaleblue: hsl(225, 100%, 98%);
+  --Desaturatedblue: hsl(224, 23%, 55%);
+  --Darkblue: hsl(223, 47%, 23%);
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: var(--Paleblue);
+  padding: 2rem 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 425px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px 10px 11px 8px rgba(0, 0, 0, 0.2);
+
+  .card-img {
+    width: 100%;
+    .main-img {
+      object-fit: cover;
+      width: 100%;
+      border-radius: 25px 25px 0 0;
+    }
+  }
+
+  .card-content {
+    padding: 2rem;
+    p {
+      color: var(--Desaturatedblue);
+      margin: 2rem 0;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .plan-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: var(--Verypaleblue);
+      padding: 1rem 1rem;
+      border-radius: 20px;
+      width: 100%;
+
+      img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .plan-desc {
+        margin-left: -2rem;
+
+        h4 {
+          font-size: 14px;
+        }
+        h5 {
+          color: var(--Desaturatedblue);
+        }
+      }
+      a {
+        font-size: 13px;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+    button {
+      padding: 1rem 4rem;
+      width: 100%;
+      border-radius: 10px;
+      border: 0;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .payment {
+      margin: 2rem 0 1rem;
+      background-color: var(--Brightblue);
+      color: #fff;
+      box-shadow: 0px 10px 11px 8px rgba(66, 18, 238, 0.1);
+    }
+
+    .cancel-order {
+      background-color: #fff;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    // display: grid;
+    // place-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
